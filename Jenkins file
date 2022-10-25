@@ -2,8 +2,8 @@ node{
    def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_bittu\\webapps'
    def tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0_bittu\\bin'
    def tomcatStatus = ' '
-    stage('SCM checkout'){
-         git branch: 'main', credentialsId: 'c9fddf47-d0ce-46e6-bdf8-affd9c77dabc', url: 'https://github.com/shaikimranjan/pipeline-project.git'       }
+    stage('SCM checkout')
+    {      url: 'https://github.com/shaikimranjan/pipeline-project.git'       }
     stage('Compile-Package-create-War-file'){
      //git maven home path
    def mvnHome = tool name: 'MAVEN-3', type:'maven'
